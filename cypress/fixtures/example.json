@@ -1,8 +1,7 @@
 {
-  "url": "platform.cloudways.com",
-  "userName": "faizanmamji1@gmail.com",
-  "passWord": "Test123@",
-  "serverUrl":"https://platform.cloudways.com/server/create",
-  "manageName":"Test",
-  "manageServerName":"Testt"
+  "url": "https://opensource-demo.orangehrmlive.com/",
+  "userName": "Admin",
+  "passWord": "admin123",
+  "dashboardText":"Dashboard",
+  "usersText":"Username"
 }

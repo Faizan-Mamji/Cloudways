@@ -13,12 +13,10 @@ import {dataSets} from '../helpers/businessHelper'
 //
 // -- This is a parent command --
  Cypress.Commands.add("login", () => {
-    // loginPOM.visit(BusinessHelper.dataSets.url())
-    // loginPOM.txtUserName(BusinessHelper.dataSets.url())
     loginPOM.visitPage(dataSets.url)
-    loginPOM.txtUserName().type(dataSets.userName)
-    loginPOM.txtPassword().type(dataSets.passWord)
-    loginPOM.btnClickLogin().click()
+    loginPOM.txtUserName(dataSets.userName)
+    loginPOM.txtPassword(dataSets.passWord)
+    loginPOM.btnClickLogin()
 })
 
 Cypress.on('uncaught:exception', (err, runnable) => {

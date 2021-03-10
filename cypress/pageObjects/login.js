@@ -1,4 +1,5 @@
 import * as assertHelper from '../helpers/assertions'
+import * as BusinessHelpers from '../helpers/businessHelper'
 
 class loginPOM {
 
@@ -6,20 +7,20 @@ class loginPOM {
         return cy.visit(weburl);
     }
 
-    txtUserName() {
-        return cy.get("#userEmail");
+    txtUserName(uname) {
+        return BusinessHelpers.typeText('#txtUsername', uname)
     }
 
-    txtPassword() {
-        return cy.get("#input_0");
+    txtPassword(upassword) {
+        return BusinessHelpers.typeText('#txtPassword', upassword)
     }
 
     btnClickLogin() {
-        return cy.get("#cw-app_container > section > div > div.login-wrap.login-right.flex-xs-100.flex-order-gt-xs-2.flex-50 > div:nth-child(3) > form > div.glb-loaderBtn-wrap > button");
+        return BusinessHelpers.clickElement('#btnLogin')
     }
 
     dashboardAssert() {
-        return assertHelper.assertText("#page-ctrl > div:nth-child(1) > header", "Servers")
+        return assertHelper.assertText("#content > div > div.head > h1", BusinessHelpers.dataSets.dashboardText)
     }
 }
 
